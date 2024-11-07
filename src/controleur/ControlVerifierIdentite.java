@@ -1,6 +1,7 @@
 package controleur;
 
 import villagegaulois.Village;
+import personnages.Gaulois;
 
 public class ControlVerifierIdentite {
 	private Village village;
@@ -12,4 +13,6 @@ public class ControlVerifierIdentite {
 	public boolean verifierIdentite(String nomVendeur) {
 		return (village.trouverHabitant(nomVendeur) != null);
 	}
+
+	
 }
