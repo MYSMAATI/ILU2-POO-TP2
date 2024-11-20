@@ -20,8 +20,8 @@ public class BoundaryAcheterProduit {
 
 	public void acheterProduit(String nomAcheteur) {
 		if (! controlAcheterProduit.isHabitant(nomAcheteur)) {
-			System.out.println("Je suis désolé " + nomAcheteur + " mais il faut " +
-					" être un habitant de notre village pour commercer ici");
+			System.out.println("Je suis dï¿½solï¿½ " + nomAcheteur + " mais il faut " +
+					" ï¿½tre un habitant de notre village pour commercer ici");
 		} else {
 			System.out.println("Quel produit voulez vous acheter ?");
 			String produit = scan.next();
@@ -29,15 +29,22 @@ public class BoundaryAcheterProduit {
 			String[] commercant = controlAcheterProduit.getCommercant(produit);
 			
 			if(commercant.length == 0) {
-				System.out.println("Désolé, personne ne vend ce produit au marché");
+				System.out.println("Dï¿½solï¿½, personne ne vend ce produit au marchï¿½");
 			} else {
-				System.out.println("Chez quel commerçant voulez vous acheter des " 
+				System.out.println("Chez quel commerï¿½ant voulez vous acheter des " 
 							+ produit + " ? \n");
+				
 				afficherCommercant(commercant);
 				
 				//choix marchand
 				
-				int choixUtilisateur = Clavier.entrerEntier();
+				int choixCommercant = scan.nextInt();
+				
+				System.out.println(nomAcheteur + " se dÃ©place jusqu'Ã  l'Ã©tal du vendeur " + commercant[choixCommercant - 1]);
+				
+				System.out.println("Combien de " + produit + "voulez vous acheter ?");
+				int quantite = scan.nextInt();
+				
 				
 			}
 		}

@@ -30,5 +30,10 @@ public class ControlAcheterProduit {
 		
 		return commercants;
 	}
+	
+	public int acheterProduit(Gaulois vendeur, int quantite) {
+		
+		return 1;
+	}
 
 }
